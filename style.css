@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.to_do_title {
+  margin: 20px 0 20px 0;
+}
+
+.to_do_container {
+  width: 80%;
+}
+
+.to_do_container_title {
+  margin: 10px 0 10px 0;
+}
+
+.to_do_list {
+  background-color: rgb(241, 241, 241);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+.to_do_list:last-child {
+  margin-bottom: 0;
+}
+
+.to_do_list.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.to_do_list.done.overdue > div > div > .to_do_list_datetime {
+  color: rgb(201, 99, 99);
+}
+
+.to_do_list.overdue > div > div > .to_do_list_datetime {
+  color: red;
+}
+
+.to_do_list_main {
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.to_do_list_sub {
+  width: calc(100% - 40px);
+  padding-right: 5px;
+  top: -60px;
+  position: relative;
+  opacity: 0;
+  height: 0;
+  transition: 500ms;
+}
+
+.to_do_list_sub.active {
+  --total-sub-item: 2;
+  margin-top: 16px;
+  height: calc(20px * var(--total-sub-item) + 5px * var(--total-sub-item));
+  top: 0;
+  opacity: 1;
+}
+
+
+.to_do_list_sub_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.to_do_list_check {
+  width: 30px;
+  height: 30px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.to_do_list_check_sub {
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.new_to_do_container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_to_do_input {
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content;
+}
+
+#new_to_do_title, #new_to_do_datetime, #new_to_do_submit {
+  border: none;
+  outline: none;
+  font: inherit;
+  padding: 5px 10px 5px 10px;
+}
+
+#new_to_do_title {
+  border-bottom: 2px solid;
+}
+
+#new_to_do_submit {
+  background-color: rgb(241, 241, 241);
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 32px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.new_to_do_sub_title, .new_to_do_sub_submit {
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+.new_to_do_sub_title {
+  background-color: transparent;
+  border-bottom: 1px dashed gray;
+  width: 90%;
+}
+
+.new_to_do_sub_submit {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .to_do_container {
+    width: 100%;
+  }
+
+  .new_to_do_input {
+    width: min-content;
+  }
+}

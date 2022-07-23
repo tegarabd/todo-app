@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title>to doo</title>
+</head>
+
+<body>
+
+  <h1 class="to_do_title">to doo</h1>
+
+  <div class="new_to_do_container">
+    <div class="new_to_do_input">
+      <input type="text" id="new_to_do_title" placeholder="add new todo">
+      <input type="datetime-local" id="new_to_do_datetime">
+    </div>
+    <button type="submit" id="new_to_do_submit">
+      <svg enable-background="new 0 0 50 50" height="20px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="20px"
+        xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path
+          d="M18,18h-7.431C7.723,18,5,21.122,5,23.969v2.062C5,28.877,7.723,32,10.569,32H18v7.432  C18,42.278,21.124,45,23.97,45h2.062C28.878,45,32,42.278,32,39.432V32h7.433C42.279,32,45,28.877,45,26.03v-2.062  C45,21.122,42.279,18,39.433,18H32v-7.433C32,7.721,28.879,5,26.032,5H23.97C21.124,5,18,7.721,18,10.567V18z"
+          fill="gray" />
+      </svg>
+    </button>
+
+  </div>
+
+  <h3 class="to_do_container_title">Not Done</h3>
+  <div class="to_do_container" id="to_do_container">
+    <div class="to_do_list">
+      <div class="to_do_list_main">
+        <div>
+          <h4 class="to_do_list_title">title</h4>
+          <p class="to_do_list_datetime">date | time</p>
+        </div>
+        <div class="to_do_list_check">
+        </div>
+      </div>
+      <div class="to_do_list_sub">
+        <hr>
+        <div class="to_do_list_sub_item">
+          <p class="to_do_list_title sub">sub title 1</p>
+          <div class="to_do_list_check_sub"></div>
+        </div>
+        <div class="to_do_list_sub_item">
+          <input type="text" placeholder="add new sub list" class="new_to_do_sub_title">
+          <button type="submit" class="new_to_do_sub_submit">
+            <svg enable-background="new 0 0 50 50" height="15px" id="Layer_1" version="1.1" viewBox="0 0 50 50"
+              width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path
+                d="M18,18h-7.431C7.723,18,5,21.122,5,23.969v2.062C5,28.877,7.723,32,10.569,32H18v7.432  C18,42.278,21.124,45,23.97,45h2.062C28.878,45,32,42.278,32,39.432V32h7.433C42.279,32,45,28.877,45,26.03v-2.062  C45,21.122,42.279,18,39.433,18H32v-7.433C32,7.721,28.879,5,26.032,5H23.97C21.124,5,18,7.721,18,10.567V18z"
+                fill="rgb(241,241,241)" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h3 class="to_do_container_title">Done</h3>
+  <div class="to_do_container" id="to_do_container_done">
+
+  </div>
+
+</body>
+
+</html>
